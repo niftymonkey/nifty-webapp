@@ -1,0 +1,16 @@
+
+> nifty-webapp@0.0.1 build /Users/mlozano/dev/p/react-webapp-boilerplate
+> webpack && npm run copyfiles
+
+Hash: 8d3e14901c000bee465b
+Version: webpack 2.1.0-beta.6
+Time: 482ms
+        Asset     Size  Chunks             Chunk Names
+    js/app.js  1.94 kB       0  [emitted]  main
+js/app.js.map  2.06 kB       0  [emitted]  main
+   [1] multi main 28 bytes {0} [built]
+    + 1 hidden modules
+
+> nifty-webapp@0.0.1 copyfiles /Users/mlozano/dev/p/react-webapp-boilerplate
+> shx cp ./src/index.html ./dist
+
