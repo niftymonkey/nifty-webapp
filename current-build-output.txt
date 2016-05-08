@@ -1,16 +1,17 @@
 
-> nifty-webapp@0.0.1 build /Users/mlozano/dev/p/react-webapp-boilerplate
+> nifty-webapp@0.1.0 build /Users/mlozano/dev/p/nifty-webapp
 > webpack && npm run copyfiles
 
-Hash: 8d3e14901c000bee465b
-Version: webpack 2.1.0-beta.6
-Time: 482ms
-        Asset     Size  Chunks             Chunk Names
-    js/app.js  1.94 kB       0  [emitted]  main
-js/app.js.map  2.06 kB       0  [emitted]  main
-   [1] multi main 28 bytes {0} [built]
-    + 1 hidden modules
+Hash: 9f81f1e7d5b32edb1f85
+Version: webpack 2.1.0-beta.7
+Time: 846ms
+                     Asset     Size  Chunks             Chunk Names
+img/yeoman-logo-263652.png  12.9 kB          [emitted]  
+                 js/app.js  16.3 kB       0  [emitted]  main
+             js/app.js.map  21.3 kB       0  [emitted]  main
+   [8] multi main 28 bytes {0} [built]
+    + 8 hidden modules
 
-> nifty-webapp@0.0.1 copyfiles /Users/mlozano/dev/p/react-webapp-boilerplate
+> nifty-webapp@0.1.0 copyfiles /Users/mlozano/dev/p/nifty-webapp
 > shx cp ./src/index.html ./dist
 

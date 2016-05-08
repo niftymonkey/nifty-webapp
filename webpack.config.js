@@ -21,7 +21,7 @@ module.exports = {
 
   output: {
     path: __dirname + '/dist', // Note: Physical files are only output by the production build task `npm run build`.
-    publicPath: '/',
+    publicPath: './',
     filename: 'js/app.js'
   },
 
@@ -30,7 +30,19 @@ module.exports = {
 
   module: {
     loaders: [
-      {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']}
+      {
+        test: /\.js$/,
+        include: path.join(__dirname, 'src'),
+        loader: 'babel'
+      },
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader?sourceMap!autoprefixer-loader"
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: "file-loader?name=img/[name]-[hash:6].[ext]"
+      }
     ]
   }
 };
