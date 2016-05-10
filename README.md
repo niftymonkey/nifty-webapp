@@ -61,22 +61,27 @@ One of my biggest pet peeves when starting a new project writing the first few l
 ridiculously large bundle come out the other end.  WTF?  So, this boilerplate will always emit bundles that have the 
 **smallest footprint possible**. 
 
-  * Having a singular production-ready (minified/compacted) artifact that can be easily served up really helps the dev
-    speed thing.
-  * Additionally, I am starting with Webpack 2 to give me the ability to drop it down another notch with
-    [tree-shaking][tree-shaking] if I so choose.
+  * While I'd love to start with the ability to drop it down another notch with [tree-shaking][tree-shaking], this is 
+    only supported in the 2.x version of webpack which currently is still in beta. Also, webpack's 2.x documentation
+    is still lacking.  Will pull that in when it's better supported/documented.
   
   
 * **Debugging** - [[webpack]]  
 If I can't make use of the debugging tools available to me right from the start, that's a deal-breaker. As a result, 
-sourcemaps are a requirement here.
+sourcemaps are a requirement here.  
+  
+  
+* **Production-Ready from the start** - [[webpack]]  
+Having a singular production-ready (minified/compacted) artifact that can be easily served up no only helps with dev 
+speed, but it also gives you a feel for how your application code is growing as you iterate.  Webpack's bundling output
+is great for keeping track of this.  
   
   
 * **Testing** - [[ava]]  
 Having easy access to a test framework that is _**FAST**_ is a must for me.
   
 
-* **Linting** - [[esLint]]  
+* **Linting** - [[eslint]]  
 Code consistency is hard enough, let's automate what we can.  A linter that can plug in any of the common code style 
 guides easily is what I'm going for.
   
