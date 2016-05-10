@@ -1,4 +1,6 @@
 # Web App Boilerplate
+
+[![Join the chat at https://gitter.im/niftymonkey/nifty-webapp](https://badges.gitter.im/niftymonkey/nifty-webapp.svg)](https://gitter.im/niftymonkey/nifty-webapp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
   
 > Because we all really just wanna get right down to building an app, with zero upfront bullshit tooling setup cost.  
 
