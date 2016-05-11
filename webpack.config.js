@@ -22,9 +22,14 @@ module.exports = {
 
   // Entry points for the app bundles
   entry: {
+    // As an array so that we can unshift in the HMR plugin if we need to
     app: [
       './src/js/index.js'
     ]
+    // Separate bundle for any production dependencies.
+    // TODO: Uncomment and add third-party dependencies as needed
+    //,vendor: [
+    //]
   },
 
   output: {
@@ -34,6 +39,12 @@ module.exports = {
   },
 
   plugins: [
+    // Pulls commonly used modules into common chunks that are reused in other chunks
+    // TODO: uncomment below if you add third-party dependencies into the vendor entry point bundle
+    //new webpack.optimize.CommonsChunkPlugin({
+    //  name: 'vendor',
+    //  filename: 'js/vendor.js'
+    //}),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
