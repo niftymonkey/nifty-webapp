@@ -6,13 +6,13 @@
 > nifty-webapp@0.2.0 clean /Users/mlozano/dev/p/nifty-webapp
 > shx rm -rf ./dist
 
-Hash: 2a6ab1f27761e42c8801
+Hash: a38571b7801ca7f0dc3b
 Version: webpack 1.13.0
-Time: 1320ms
+Time: 1508ms
                      Asset       Size  Chunks             Chunk Names
                 index.html  185 bytes          [emitted]  
 img/yeoman-logo-263652.png    12.9 kB          [emitted]  
-                 js/app.js    6.56 kB       0  [emitted]  app
-             js/app.js.map    43.6 kB       0  [emitted]  app
+                 js/app.js    7.81 kB       0  [emitted]  app
+             js/app.js.map      49 kB       0  [emitted]  app
    [0] multi app 28 bytes {0} [built]
-    + 9 hidden modules
+    + 11 hidden modules

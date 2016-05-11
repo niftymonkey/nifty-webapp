@@ -116,7 +116,7 @@ boilerplate.  Here's where I plan on going with this, not necessarily in this or
 - [x] CSS support (with sourcemaps)
 - [x] Linting support
 - [x] Editor Config support
-- [ ] Auto Reloading support
+- [x] Auto Reloading support
 - [ ] Test framework support
 - [ ] Code Coverage support
 - [x] Production artifact build step
