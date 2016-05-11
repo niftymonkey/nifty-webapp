@@ -51,15 +51,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader?sourceMap!autoprefixer-loader"
+        loader: "style!css?sourceMap!autoprefixer"
       },
       {
         test: /\.(png|jpg|gif)$/,
-        loader: "file-loader?name=img/[name]-[hash:6].[ext]"
+        loader: "file?name=img/[name]-[hash:6].[ext]"
       },
       {
         test: /\.(html|htm)$/,
-        loader: "file-loader?name=[name].[ext]"
+        loader: "file?name=[name].[ext]"
       }
     ]
   }
