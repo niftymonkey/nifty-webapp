@@ -11,14 +11,9 @@ To use this boilerplate as a basis for a new application:
 
 1. Clone this repo
 2. Change the relevant bits in package.json
-3. Run the following:
-```
-    npm run build
-```
+3. Run the following: `npm i && npm start`
+4. Open `http://localhost:3000`
     
-This will transpile the source into the `dist/` directory and also copy over any relevant static files.  Then you can
-just open the `index.html` file in that directory and see the app in action.
-
 And that's it!  
   
 
