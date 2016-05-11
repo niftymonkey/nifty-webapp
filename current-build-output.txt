@@ -2,14 +2,14 @@
 > nifty-webapp@0.1.0 build /Users/mlozano/dev/p/nifty-webapp
 > webpack && npm run copyfiles
 
-Hash: 9f81f1e7d5b32edb1f85
-Version: webpack 2.1.0-beta.7
-Time: 846ms
+Hash: 000c4a72893d0bd5d40f
+Version: webpack 1.13.0
+Time: 807ms
                      Asset     Size  Chunks             Chunk Names
 img/yeoman-logo-263652.png  12.9 kB          [emitted]  
-                 js/app.js  16.3 kB       0  [emitted]  main
-             js/app.js.map  21.3 kB       0  [emitted]  main
-   [8] multi main 28 bytes {0} [built]
+                 js/app.js  16.3 kB       0  [emitted]  app
+             js/app.js.map  21.3 kB       0  [emitted]  app
+   [0] multi app 28 bytes {0} [built]
     + 8 hidden modules
 
 > nifty-webapp@0.1.0 copyfiles /Users/mlozano/dev/p/nifty-webapp

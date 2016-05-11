@@ -1,12 +1,14 @@
 {
   "name": "nifty-webapp",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "How about we get right down to building an app, with zero upfront tooling bullshit cost?",
   "scripts": {
     "copyfiles": "shx cp ./src/index.html ./dist",
     "clean": "shx rm -rf ./dist",
     "build": "webpack && npm run copyfiles",
+    "wds": "webpack-dev-server --port 3000 --content-base ./dist",
+    "start": "npm run clean && npm run build && npm run wds",
     "buildlog": "npm run build > current-build-output.txt"
   },
   "repository": {
@@ -25,7 +27,8 @@
     "file-loader": "^0.8.5",
     "shx": "^0.1.1",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {}
 }
