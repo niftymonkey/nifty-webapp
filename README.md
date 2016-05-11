@@ -119,7 +119,7 @@ boilerplate.  Here's where I plan on going with this, not necessarily in this or
 - [ ] Auto Reloading support
 - [ ] Test framework support
 - [ ] Code Coverage support
-- [ ] Production artifact build step
+- [x] Production artifact build step
 - [ ] Yeoman generator
 
 
