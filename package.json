@@ -4,11 +4,9 @@
   "version": "0.2.0",
   "description": "How about we get right down to building an app, with zero upfront tooling bullshit cost?",
   "scripts": {
-    "copyfiles": "shx cp ./src/index.html ./dist",
     "clean": "shx rm -rf ./dist",
-    "build": "webpack && npm run copyfiles",
-    "wds": "webpack-dev-server --port 3000 --content-base ./dist",
-    "start": "npm run clean && npm run build && npm run wds",
+    "build": "npm run clean && webpack",
+    "start": "npm run clean && node server.js",
     "buildlog": "npm run build > current-build-output.txt"
   },
   "repository": {

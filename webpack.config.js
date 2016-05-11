@@ -8,6 +8,12 @@ module.exports = {
   //            https://webpack.github.io/docs/configuration.html#devtool
   devtool: 'source-map',
 
+  devServer: {
+    port: 3000,
+    contentBase: "./dist",
+    stats: "minimal"
+  },
+
   // set to false to see a list of every file being bundled.
   noInfo: true,
 
@@ -44,6 +50,10 @@ module.exports = {
       {
         test: /\.(png|jpg|gif)$/,
         loader: "file-loader?name=img/[name]-[hash:6].[ext]"
+      },
+      {
+        test: /\.(html|htm)$/,
+        loader: "file-loader?name=[name].[ext]"
       }
     ]
   }

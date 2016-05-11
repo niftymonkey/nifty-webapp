@@ -1,3 +1,4 @@
+import "../index.html";
 import "../assets/styles/base.css";
 import "../assets/styles/app.css";
 import logoSrc from '../assets/img/yeoman-logo.png';
