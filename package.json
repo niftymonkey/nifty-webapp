@@ -6,10 +6,10 @@
   "scripts": {
     "clean": "shx rm -rf ./dist",
     "lint": "eslint ./src",
-    "build": "npm run clean && npm run lint && webpack",
-    "watch": "npm run clean && npm run lint && webpack --watch",
-    "start": "npm run clean && npm run lint && node server.js",
-    "dev": "npm run clean && npm run lint && node server.js --hot",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "node server.js",
+    "dev": "node server.js --hot",
     "buildlog": "npm run build > current-build-output.txt"
   },
   "repository": {
