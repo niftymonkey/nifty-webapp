@@ -6,7 +6,7 @@ export default class Header {
   render() {
     let headerElem = document.createElement("h1");
     headerElem.className = "header";
-    let newContent = document.createTextNode("Yo -- " + this.headerText);
+    let newContent = document.createTextNode(`✦ ${this.headerText} ✦`);
     headerElem.appendChild(newContent);
 
     return headerElem;
