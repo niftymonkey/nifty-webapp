@@ -5,17 +5,37 @@
 This boilerplate is intended to find a sweet spot between barebones for building a maintainable web application 
 and not having the-kitchen-sink thrown in from the start.
    
+## Features
+Here's what comes automagically from the static version of this boilerplate.
 
+- Simple html/javascript example files transpiled into tiny output bundles (with sourcemaps)  
+- Image file support (bundled/moved by webpack)  
+- CSS support (with sourcemaps)  
+- Linting support  
+- Editor Config support  
+- Auto Reloading support  
+- Production artifact build step  
+- [Yeoman generator][nwa-generator]
+  
+  
 ## Usage
-To use this boilerplate as a basis for a new application:
+
+### Yeoman
+If you want this base boilerplate, but you'd also like to some of the options mentioned below in the **Options** 
+category, you should look at using the [Yeoman][yo] version of this boilerplate:  [generator-nifty-webapp][nwa-generator]
+
+### Git
+If the "Must Have's" below are all you need, you can either use the yeoman generator option above (hitting enter on any
+of the optional defaults), or you can do the following:
 
 1. Clone this repo
 2. Change the relevant bits in package.json
 3. Run the following: `npm i && npm start`
 4. Open `http://localhost:3000`
-    
-And that's it!  
+
   
+---------------------------------------
+
 
 ## Motivation
 So we've all been feeling the [javascript fatigue][js-fatigue] in web development.  After starting a bunch of side 
@@ -35,8 +55,8 @@ writing the code that matters ASAP.
   
 2. **Simplicity / Configurability**  
 Rather than having a boilerplate that does ALL THE THINGS, I prefer something with the absolute basics of a good project
-so that you can choose what technologies you want when the time is right.  Even the "basics" I choose here are items 
-that I'd want to eventually make configurable (via yeoman perhaps)
+so that you can choose what technologies you want when the time is right.  Even the "Must Have's" I choose here are items 
+that I'd probably want to eventually make configurable to some degree.
   
   
 3. **Documentation**  
@@ -44,7 +64,7 @@ This means having a boilerplate that's easy to walk through, has information abo
 is for, and that has meaningful comments so that the whole thing doesn't just become a big pile of magic.
   
   
-### What this boilerplate brings
+### Must Haves
 * **Transpiling** - [[babel]]  
 We're [continually getting more][tc39-ecma] features and language improvements and as a result, one of the the first 
 things I want to do is have the ability to write code in the most recent version of the language ... and have that 
@@ -53,7 +73,7 @@ transpiled down into browser-ready javascript for me.  Babel is what's getting m
   
 * **Small Size** - [[webpack]]  
 One of my biggest pet peeves when starting a new project writing the first few lines, transpiling it down, and seeing a 
-ridiculously large bundle come out the other end.  WTF?  So, this boilerplate will always emit bundles that have the 
+ridiculously large bundle come out the other end.  So, this boilerplate will always emit bundles that have the 
 **smallest footprint possible**. 
 
   * While I'd love to start with the ability to drop it down another notch with [tree-shaking][tree-shaking], this is 
@@ -66,19 +86,21 @@ If I can't make use of the debugging tools available to me right from the start,
 sourcemaps are a requirement here.  
   
   
+* **Auto Reloading** - [[webpack-hmr]]  
+Saving, running a build, and reloading the page are so easy to automate these days, that this is just a great 
+dev-speed bonus.  This will be opt-in via build script target.
+  
+  
+* **Linting / Editor Config** - [[eslint]]  
+Code consistency is hard enough, let's automate what we can.  Using a linter that supports plugging in the common code 
+style rules/presets.  As an additional consistency aid, I'm putting in an [editor config][ec] file that can be easily 
+modified to fit your project's needs.
+  
+  
 * **Production-Ready from the start** - [[webpack]]  
-Having a singular production-ready (minified/compacted) artifact that can be easily served up no only helps with dev 
-speed, but it also gives you a feel for how your application code is growing as you iterate.  Webpack's bundling output
-is great for keeping track of this.  
-  
-  
-* **Testing** - [[ava]]  
-Having easy access to a test framework that is _**FAST**_ is a must for me.
-  
-
-* **Linting** - [[eslint]]  
-Code consistency is hard enough, let's automate what we can.  A linter that can plug in any of the common code style 
-guides easily is what I'm going for.
+Having a singular production-ready (minified/compacted) artifact that can be easily served up right at project creation 
+is not only a dev speed bonus, but it also gives you a feel for how your application code is growing as you iterate.  
+Webpack's bundling output is great for keeping track of this size.  
   
   
 * **NPM/Node Scripts** - [[npm][npm-scripts]/[node]]  
@@ -86,41 +108,31 @@ Let's not start with any unnecessary tooling abstractions. If you're interested 
 read [this article][why-npm-scripts].
   
   
-* **Auto Reloading** - [[webpack-hmr]]  
-Saving, running a build, and reloading the page are so easy to automate these days, that this is just a great 
-dev-speed bonus.  This will end up in here, probably in the [HMR][hmr] flavor.  Also, it will be opt-in via npm script
-  
-  
-* **Code Coverage** - [[nyc]]  
-This is just something that I feel can fall into the testing trap where you dig yourself a hole and then have to spend
-tons of time later trying to dig yourself out.  Having this from the start seems like the way to go.
+### Options
+The following things are items that I'm not intending to put into this boilerplate by default.  However, some of my 
+favorite options will end up in the [generator][nwa-generator] version of this boilerplate.
 
-### What this boilerplate DOES NOT bring
-* **Frameworks and Libraries**
-Let's not tie any of those in unnecessarily, especially since this boilerplate is 
-intended to be used with any frameworks and libraries.  I'd say that at best, configuring in a framework or library 
-is a job for the yeoman generator version of this boilerplate to do at project creation time.
+* **Frameworks and Libraries**  
+This boilerplate is intended to be used with any number of frameworks and libraries, so I'm leaving this kinda stuff out 
+of the base.  For some of the more popular frameworks and libraries, however, I'll likely end up adding them as options 
+to the [generator][nwa-generator].
   
   
 * **CSS Preprocessors**  
-This really falls into the same boat as frameworks and libraries above.  Honestly, this should be up to you and/or 
-your friendly yeoman generator version of this to decide.
+Trying different CSS preprocessors to get a feel for them is a pretty regular learning task for me.  As a results, I'd 
+like to make this decision at project creation time via the [generator][nwa-generator]. 
   
 
-## Roadmap
-So I'm starting small and might even "release" versions so I can go back to previous, more basic, stages of this
-boilerplate.  Here's where I plan on going with this, not necessarily in this order.
-
-- [x] Simple index.html, single javascript file, transpiling into a tiny output bundle, with a side of sourcemaps
-- [x] Image file support (bundled/moved by webpack)
-- [x] CSS support (with sourcemaps)
-- [x] Linting support
-- [x] Editor Config support
-- [x] Auto Reloading support
-- [ ] Test framework support
-- [ ] Code Coverage support
-- [x] Production artifact build step
-- [ ] Yeoman generator
+* **Testing**  
+Having easy access to a test framework that is _**FAST**_ is a must for me.  I originally was going to put this in the 
+base boilerplate. But because this lib choice can be a contentious decision (assertion syntax and browser compatibility 
+for instance) I'm going to leave this out of the static boilerplate and supply my favorite options in the [generator][nwa-generator].
+  
+  
+* **Code Coverage**  
+This is another one that I feel follows along the lines of the **Testing** reasoning above.  It feels like a must, but
+library (and potentially service) choice is something that should probably be made on a per-project basis.  Again 
+[generator][nwa-generator]!
 
 
 [js-fatigue]:      https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4
@@ -133,8 +145,9 @@ boilerplate.  Here's where I plan on going with this, not necessarily in this or
 [babel]:           https://babeljs.io/
 [webpack]:         http://webpack.github.io/
 [webpack-hmr]:     https://webpack.github.io/docs/hot-module-replacement-with-webpack.html
-[ava]:             https://github.com/sindresorhus/ava
 [eslint]:          http://eslint.org/
 [npm-scripts]:     https://docs.npmjs.com/misc/scripts
 [node]:            https://nodejs.org/en/
-[nyc]:             https://github.com/bcoe/nyc
+[ec]:              http://editorconfig.org/
+[yo]:              https://github.com/yeoman/yo
+[nwa-generator]:   https://github.com/niftymonkey/generator-nifty-webapp
