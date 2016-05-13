@@ -30,9 +30,42 @@
 and not having the-kitchen-sink thrown in from the start.</p>
 
 <h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
+<p>Here's what comes automagically from the static version of this boilerplate.</p>
+
+<ul>
+<li>Simple html/javascript example files transpiled into tiny output bundles (with sourcemaps)<br>
+</li>
+<li>Image file support (bundled/moved by webpack)<br>
+</li>
+<li>CSS support (with sourcemaps)<br>
+</li>
+<li>Linting support<br>
+</li>
+<li>Editor Config support<br>
+</li>
+<li>Auto Reloading support<br>
+</li>
+<li>Production artifact build step<br>
+</li>
+<li><a href="https://github.com/niftymonkey/generator-nifty-webapp">Yeoman generator</a></li>
+</ul>
+
+<h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>To use this boilerplate as a basis for a new application:</p>
+<h3>
+<a id="yeoman" class="anchor" href="#yeoman" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Yeoman</h3>
+
+<p>If you want this base boilerplate, but you'd also like to some of the options mentioned below in the <strong>Options</strong> 
+category, you should look at using the <a href="https://github.com/yeoman/yo">Yeoman</a> version of this boilerplate:  <a href="https://github.com/niftymonkey/generator-nifty-webapp">generator-nifty-webapp</a></p>
+
+<h3>
+<a id="git" class="anchor" href="#git" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Git</h3>
+
+<p>If the "Must Have's" below are all you need, you can either use the yeoman generator option above (hitting enter on any
+of the optional defaults), or you can do the following:</p>
 
 <ol>
 <li>Clone this repo</li>
@@ -43,7 +76,7 @@ and not having the-kitchen-sink thrown in from the start.</p>
 </li>
 </ol>
 
-<p>And that's it!  </p>
+<hr>
 
 <h2>
 <a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Motivation</h2>
@@ -66,15 +99,15 @@ This is the main and most important tenet here.  Something small that covers fun
 writing the code that matters ASAP. </p></li>
 <li><p><strong>Simplicity / Configurability</strong><br>
 Rather than having a boilerplate that does ALL THE THINGS, I prefer something with the absolute basics of a good project
-so that you can choose what technologies you want when the time is right.  Even the "basics" I choose here are items 
-that I'd want to eventually make configurable (via yeoman perhaps)</p></li>
+so that you can choose what technologies you want when the time is right.  Even the "Must Have's" I choose here are items 
+that I'd probably want to eventually make configurable to some degree.</p></li>
 <li><p><strong>Documentation</strong><br>
 This means having a boilerplate that's easy to walk through, has information about what each of the dev dependencies
 is for, and that has meaningful comments so that the whole thing doesn't just become a big pile of magic.</p></li>
 </ol>
 
 <h3>
-<a id="what-this-boilerplate-brings" class="anchor" href="#what-this-boilerplate-brings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What this boilerplate brings</h3>
+<a id="must-haves" class="anchor" href="#must-haves" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Must Haves</h3>
 
 <ul>
 <li><p><strong>Transpiling</strong> - [<a href="https://babeljs.io/">babel</a>]<br>
@@ -84,7 +117,7 @@ transpiled down into browser-ready javascript for me.  Babel is what's getting m
 <li>
 <p><strong>Small Size</strong> - [<a href="http://webpack.github.io/">webpack</a>]<br>
 One of my biggest pet peeves when starting a new project writing the first few lines, transpiling it down, and seeing a 
-ridiculously large bundle come out the other end.  WTF?  So, this boilerplate will always emit bundles that have the 
+ridiculously large bundle come out the other end.  So, this boilerplate will always emit bundles that have the 
 <strong>smallest footprint possible</strong>. </p>
 
 <ul>
@@ -96,55 +129,45 @@ is still lacking.  Will pull that in when it's better supported/documented.</li>
 <li><p><strong>Debugging</strong> - [<a href="http://webpack.github.io/">webpack</a>]<br>
 If I can't make use of the debugging tools available to me right from the start, that's a deal-breaker. As a result, 
 sourcemaps are a requirement here.  </p></li>
+<li><p><strong>Auto Reloading</strong> - [<a href="https://webpack.github.io/docs/hot-module-replacement-with-webpack.html">webpack-hmr</a>]<br>
+Saving, running a build, and reloading the page are so easy to automate these days, that this is just a great 
+dev-speed bonus.  This will be opt-in via build script target.</p></li>
+<li><p><strong>Linting / Editor Config</strong> - [<a href="http://eslint.org/">eslint</a>]<br>
+Code consistency is hard enough, let's automate what we can.  Using a linter that supports plugging in the common code 
+style rules/presets.  As an additional consistency aid, I'm putting in an <a href="http://editorconfig.org/">editor config</a> file that can be easily 
+modified to fit your project's needs.</p></li>
 <li><p><strong>Production-Ready from the start</strong> - [<a href="http://webpack.github.io/">webpack</a>]<br>
-Having a singular production-ready (minified/compacted) artifact that can be easily served up no only helps with dev 
-speed, but it also gives you a feel for how your application code is growing as you iterate.  Webpack's bundling output
-is great for keeping track of this.  </p></li>
-<li><p><strong>Testing</strong> - [<a href="https://github.com/sindresorhus/ava">ava</a>]<br>
-Having easy access to a test framework that is <em><strong>FAST</strong></em> is a must for me.</p></li>
-<li><p><strong>Linting</strong> - [<a href="http://eslint.org/">eslint</a>]<br>
-Code consistency is hard enough, let's automate what we can.  A linter that can plug in any of the common code style 
-guides easily is what I'm going for.</p></li>
+Having a singular production-ready (minified/compacted) artifact that can be easily served up right at project creation 
+is not only a dev speed bonus, but it also gives you a feel for how your application code is growing as you iterate.<br>
+Webpack's bundling output is great for keeping track of this size.  </p></li>
 <li><p><strong>NPM/Node Scripts</strong> - [<a href="https://docs.npmjs.com/misc/scripts">npm</a>/<a href="https://nodejs.org/en/">node</a>]<br>
 Let's not start with any unnecessary tooling abstractions. If you're interested in a deeper dive about the why, 
 read <a href="https://medium.freecodecamp.com/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8">this article</a>.</p></li>
-<li><p><strong>Auto Reloading</strong> - [<a href="https://webpack.github.io/docs/hot-module-replacement-with-webpack.html">webpack-hmr</a>]<br>
-Saving, running a build, and reloading the page are so easy to automate these days, that this is just a great 
-dev-speed bonus.  This will end up in here, probably in the <a href="https://webpack.github.io/docs/hot-module-replacement-with-webpack.html">HMR</a> flavor.  Also, it will be opt-in via npm script</p></li>
-<li><p><strong>Code Coverage</strong> - [<a href="https://github.com/bcoe/nyc">nyc</a>]<br>
-This is just something that I feel can fall into the testing trap where you dig yourself a hole and then have to spend
-tons of time later trying to dig yourself out.  Having this from the start seems like the way to go.</p></li>
 </ul>
 
 <h3>
-<a id="what-this-boilerplate-does-not-bring" class="anchor" href="#what-this-boilerplate-does-not-bring" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What this boilerplate DOES NOT bring</h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h3>
+
+<p>The following things are items that I'm not intending to put into this boilerplate by default.  However, some of my 
+favorite options will end up in the <a href="https://github.com/niftymonkey/generator-nifty-webapp">generator</a> version of this boilerplate.</p>
 
 <ul>
-<li><p><strong>Frameworks and Libraries</strong>
-Let's not tie any of those in unnecessarily, especially since this boilerplate is 
-intended to be used with any frameworks and libraries.  I'd say that at best, configuring in a framework or library 
-is a job for the yeoman generator version of this boilerplate to do at project creation time.</p></li>
+<li><p><strong>Frameworks and Libraries</strong><br>
+This boilerplate is intended to be used with any number of frameworks and libraries, so I'm leaving this kinda stuff out 
+of the base.  For some of the more popular frameworks and libraries, however, I'll likely end up adding them as options 
+to the <a href="https://github.com/niftymonkey/generator-nifty-webapp">generator</a>.</p></li>
 <li><p><strong>CSS Preprocessors</strong><br>
-This really falls into the same boat as frameworks and libraries above.  Honestly, this should be up to you and/or 
-your friendly yeoman generator version of this to decide.</p></li>
+Trying different CSS preprocessors to get a feel for them is a pretty regular learning task for me.  As a results, I'd 
+like to make this decision at project creation time via the <a href="https://github.com/niftymonkey/generator-nifty-webapp">generator</a>. </p></li>
+<li><p><strong>Testing</strong><br>
+Having easy access to a test framework that is <em><strong>FAST</strong></em> is a must for me.  I originally was going to put this in the 
+base boilerplate. But because this lib choice can be a contentious decision (assertion syntax and browser compatibility 
+for instance) I'm going to leave this out of the static boilerplate and supply my favorite options in the <a href="https://github.com/niftymonkey/generator-nifty-webapp">generator</a>.</p></li>
+<li><p><strong>Code Coverage</strong><br>
+This is another one that I feel follows along the lines of the <strong>Testing</strong> reasoning above.  It feels like a must, but
+library (and potentially service) choice is something that should probably be made on a per-project basis.  Again 
+<a href="https://github.com/niftymonkey/generator-nifty-webapp">generator</a>!</p></li>
 </ul>
-
-<h2>
-<a id="roadmap" class="anchor" href="#roadmap" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Roadmap</h2>
-
-<p>So I'm starting small and might even "release" versions so I can go back to previous, more basic, stages of this
-boilerplate.  Here's where I plan on going with this, not necessarily in this order.</p>
-
-<p>✔ Simple html/javascript example files transpiled into tiny output bundles (with sourcemaps)<br>
-✔ Image file support (bundled/moved by webpack)<br>
-✔ CSS support (with sourcemaps)<br>
-✔ Linting support<br>
-✔ Editor Config support<br>
-✔ Auto Reloading support<br>
-☐ Test framework support<br>
-☐ Code Coverage support<br>
-✔ Production artifact build step<br>
-✔ <a href="https://github.com/niftymonkey/generator-nifty-webapp">Yeoman generator</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/niftymonkey/nifty-webapp">nifty-webapp</a> is maintained by <a href="https://github.com/niftymonkey">niftymonkey</a>.</span>
