@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   debug: true,
@@ -39,6 +40,8 @@ module.exports = {
   },
 
   plugins: [
+    // extract inline css into separate 'styles.css'
+    new ExtractTextPlugin('assets/styles/app.css'),
     // Pulls commonly used modules into common chunks that are reused in other chunks
     // TODO: uncomment below if you add third-party dependencies into the vendor entry point bundle
     //new webpack.optimize.CommonsChunkPlugin({
@@ -61,8 +64,12 @@ module.exports = {
         loader: 'babel'
       },
       {
-        test: /\.css$/,
-        loader: "style!css?sourceMap!autoprefixer"
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract(
+          // activate source maps via loader query
+          'css?sourceMap!' +
+          'less?sourceMap'
+        )
       },
       {
         test: /\.(png|jpg|gif)$/,
